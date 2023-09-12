@@ -8,7 +8,11 @@ export default function Testing() {
       <form>
         <div className="row">
           <div className="col-9">
-            <input type="search" className="form-control" />
+            <input
+              type="search"
+              className="form-control"
+              placeholder="Enter a city.."
+            />
           </div>
           <div className="col-3">
             <input

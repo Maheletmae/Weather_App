@@ -2,15 +2,30 @@
   margin: 30px auto;
   max-width: 650px;
   text-align: center;
+  background: #d3ddf1;
+  padding: 40px 60px;
+  border-radius: 10px;
 }
-
-li {
+body {
+  background: #352f44;
+}
+.App h2 {
+  padding-bottom: 40px;
+  color: #5c5470;
+}
+.App li {
   list-style-type: none;
 }
 
-p {
-  color: lightslategray;
+.App footer {
+  color: #352f44;
+  font-size: 17px;
+  padding-top: 15px;
 }
-a {
-  color: blueviolet;
+.App a {
+  color: #5c5470;
+}
+.name {
+  color: #2a2438;
+  font-weight: 500;
 }
