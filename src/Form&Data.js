@@ -5,8 +5,8 @@ import WeatherInfo from "./WeatherInfo";
 
 export default function Form_withData(props) {
   const [city, setCity] = useState(props.InitialCity);
-  const [data, setData] = useState({ ready: false });
-
+  const [Data, setData] = useState({ ready: false });
+  console.log(Data);
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -31,7 +31,7 @@ export default function Form_withData(props) {
       city: response.data.name,
     });
   }
-  if (data.ready) {
+  if (Data.ready) {
     return (
       <div className="Form_withData">
         <form onSubmit={handleSubmit}>
@@ -53,7 +53,7 @@ export default function Form_withData(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo fromData={data} />
+        <WeatherInfo fromData={Data} />
       </div>
     );
   } else {
