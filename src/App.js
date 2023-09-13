@@ -1,6 +1,7 @@
 import "./App.css";
 //import Search from "./Search";
 import Testing from "./Testing";
+import WeatherInfo from "./WeatherInfo";
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
         <br />
         <hr />
         <br />
+        <WeatherInfo />
         <footer>
+          <hr />
+          <br />
           This project was coded by{" "}
           <span className="name">Mahelet Lisa Seleshi</span> and is open-sourced
           on{" "}

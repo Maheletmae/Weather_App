@@ -1,0 +1,11 @@
+.WeatherInfo li {
+  text-align: left;
+}
+.WeatherInfo .unit {
+  font-size: 25px;
+  color: gray;
+}
+.colorful {
+  color: rgb(56, 90, 242);
+  font-weight: 700;
+}
