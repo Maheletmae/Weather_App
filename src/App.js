@@ -1,7 +1,5 @@
 import "./App.css";
-//import Search from "./Search";
-import Testing from "./Testing";
-import WeatherInfo from "./WeatherInfo";
+import Form_withData from "./Form&Data";
 
 function App() {
   return (
@@ -9,11 +7,11 @@ function App() {
       <div className="Container">
         <h2>🌞App - Weather Search Engine </h2>
 
-        <Testing />
+        <Form_withData />
         <br />
         <hr />
         <br />
-        <WeatherInfo />
+
         <footer>
           <hr />
           <br />

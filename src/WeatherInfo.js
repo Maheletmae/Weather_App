@@ -2,7 +2,7 @@ import React from "react";
 import "./WeatherInfo.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function Testing() {
+export default function WeatherInfo() {
   return (
     <div className="WeatherInfo">
       <div className="row">
