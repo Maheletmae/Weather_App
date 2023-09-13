@@ -1,16 +1,14 @@
 import "./App.css";
 import Form_withData from "./Form&Data";
+import React from "react";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="Container">
         <h2>🌞App - Weather Search Engine </h2>
 
-        <Form_withData />
-        <br />
-        <hr />
-        <br />
+        <Form_withData InitialCity="London" />
 
         <footer>
           <hr />
@@ -36,5 +34,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

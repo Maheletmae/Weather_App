@@ -9,3 +9,17 @@
   color: rgb(56, 90, 242);
   font-weight: 700;
 }
+.cityname {
+  font-weight: 750;
+  font-size: 30px;
+  color: rgb(54, 67, 108);
+  padding-bottom: 5px;
+}
+.temp {
+  font-size: 28px;
+}
+.unit {
+  font-size: 50px;
+  position: relative;
+  top: -3px;
+}

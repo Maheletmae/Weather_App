@@ -3,8 +3,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
 
-export default function Form_withData() {
-  const [city, setCity] = useState(null);
+export default function Form_withData(props) {
+  const [city, setCity] = useState(props.InitialCity);
   const [data, setData] = useState({ ready: false });
 
   function handleSubmit(event) {
@@ -26,14 +26,14 @@ export default function Form_withData() {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
   }
   if (data.ready) {
     return (
-      <div className="Testing">
+      <div className="Form_withData">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
@@ -53,7 +53,7 @@ export default function Form_withData() {
             </div>
           </div>
         </form>
-        <WeatherInfo />
+        <WeatherInfo fromData={data} />
       </div>
     );
   } else {
