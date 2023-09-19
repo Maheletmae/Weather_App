@@ -1,6 +1,7 @@
 import React from "react";
 import "./WeatherInfo.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Date from "./Date";
 
 export default function WeatherInfo(props) {
   return (
@@ -14,7 +15,7 @@ export default function WeatherInfo(props) {
           <ul>
             <li className="cityname">{props.fromData.city}</li>
             <li>
-              Tuesday 08:16,{" "}
+              <Date date={props.fromData.date} />,{" "}
               <span className="colorful">{props.fromData.description}</span>
             </li>
             <li>
