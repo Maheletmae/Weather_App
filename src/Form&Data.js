@@ -3,12 +3,13 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
 
-export default function Form_withData(props) {
+export default function FormWithData(props) {
   const [city, setCity] = useState(props.InitialCity);
   const [Data, setData] = useState({ ready: false });
-  console.log(Data);
+
   function handleSubmit(event) {
     event.preventDefault();
+    search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);

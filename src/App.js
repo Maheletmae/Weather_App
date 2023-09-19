@@ -1,5 +1,5 @@
 import "./App.css";
-import Form_withData from "./Form&Data";
+import FormWithData from "./Form&Data";
 import React from "react";
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
       <div className="Container">
         <h2>🌞App - Weather Search Engine </h2>
 
-        <Form_withData InitialCity="London" />
+        <FormWithData InitialCity="London" />
 
         <footer>
           <hr />
