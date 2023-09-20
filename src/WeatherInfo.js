@@ -2,6 +2,7 @@ import React from "react";
 import "./WeatherInfo.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Date from "./Date";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,7 +10,6 @@ export default function WeatherInfo(props) {
       <br />
       <hr />
       <br />
-
       <div className="row">
         <div className="col-8">
           <ul>
