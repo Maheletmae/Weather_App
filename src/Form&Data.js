@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 export default function FormWithData(props) {
   const [city, setCity] = useState(props.InitialCity);
@@ -55,6 +56,7 @@ export default function FormWithData(props) {
           </div>
         </form>
         <WeatherInfo fromData={Data} />
+        <Forecast coord={Data.coordinates} />
       </div>
     );
   } else {

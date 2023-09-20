@@ -34,14 +34,26 @@ export default function Forecast(props) {
   if (loaded) {
     return (
       <div className="Forecast">
-        <ul>
-          <li>{day()}</li>
-          <li className="smallImages">{miniIcon}</li>
-          <li>
-            <span> `${maxTemp}°`</span>
-            <span>`${minTemp}°`</span>
-          </li>
-        </ul>
+        <div className="row">
+          {forecast.map(function (dailyInfo, index) {
+            if (index < 5) {
+              return (
+                <div className="col dailyInfo" key={index}>
+                  <ul>
+                    <li>{day()}</li>
+                    <li className="smallImages">{miniIcon}</li>
+                    <li>
+                      <span> `${maxTemp}°`</span>
+                      <span>`${minTemp}°`</span>
+                    </li>
+                  </ul>
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
     );
   } else {
