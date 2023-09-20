@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Forecast.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
@@ -11,6 +11,9 @@ export default function Forecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
   function maxTemp() {
     let maxtemp = Math.round(props.data.temp.max);
