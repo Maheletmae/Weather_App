@@ -34,8 +34,8 @@ export default function Forecast(props) {
                     <li>{day(dailyInfo.dt)}</li>
                     <li className="smallImages">{dailyInfo.weather[0].icon}</li>
                     <li>
-                      <span> `${Math.round(dailyInfo.temp.max)}°`</span>
-                      <span>`${Math.round(dailyInfo.temp.min)}°`</span>
+                      <span> {Math.round(dailyInfo.temp.max)}°</span>
+                      <span>{Math.round(dailyInfo.temp.min)}°</span>
                     </li>
                   </ul>
                 </div>
