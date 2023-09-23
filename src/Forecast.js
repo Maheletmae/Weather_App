@@ -15,23 +15,11 @@ export default function Forecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
-  function maxTemp() {
-    let maxtemp = Math.round(props.data.temp.max);
-    return maxtemp;
-  }
-  function minTemp() {
-    let mintemp = Math.round(props.data.temp.min);
-    return mintemp;
-  }
-  function day() {
+  function day(time) {
     let days = ["Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."];
-    let date = new Date(props.data.dt * 1000);
+    let date = new Date(time * 1000);
     let day = date.getDay();
     return days[day];
-  }
-  function miniIcon() {
-    let Icon = props.data.weather[0].icon;
-    return Icon;
   }
 
   if (loaded) {
@@ -43,11 +31,11 @@ export default function Forecast(props) {
               return (
                 <div className="col dailyInfo" key={index}>
                   <ul>
-                    <li>{day()}</li>
-                    <li className="smallImages">{miniIcon}</li>
+                    <li>{day(dailyInfo.dt)}</li>
+                    <li className="smallImages">{dailyInfo.weather[0].icon}</li>
                     <li>
-                      <span> `${maxTemp}°`</span>
-                      <span>`${minTemp}°`</span>
+                      <span> `${Math.round(dailyInfo.temp.max)}°`</span>
+                      <span>`${Math.round(dailyInfo.temp.min)}°`</span>
                     </li>
                   </ul>
                 </div>
