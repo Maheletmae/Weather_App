@@ -21,6 +21,10 @@ export default function Forecast(props) {
     let day = date.getDay();
     return days[day];
   }
+  function MiniIcon(response) {
+    let icon = `http://openweathermap.org/img/wn/${response}@2x.png`;
+    return icon;
+  }
 
   if (loaded) {
     return (
@@ -32,10 +36,17 @@ export default function Forecast(props) {
                 <div className="col dailyInfo" key={index}>
                   <ul>
                     <li>{day(dailyInfo.dt)}</li>
-                    <li className="smallImages">{dailyInfo.weather[0].icon}</li>
+                    <li className="smallImages">
+                      <div className="image">
+                        <img
+                          src={MiniIcon(dailyInfo.weather[0].icon)}
+                          alt=""
+                        ></img>
+                      </div>
+                    </li>
                     <li>
-                      <span> {Math.round(dailyInfo.temp.max)}°</span>
-                      <span>{Math.round(dailyInfo.temp.min)}°</span>
+                      <span>{Math.round(dailyInfo.temp.max)}° </span>
+                      <span> {Math.round(dailyInfo.temp.min)}°</span>
                     </li>
                   </ul>
                 </div>

@@ -56,6 +56,7 @@ export default function FormWithData(props) {
           </div>
         </form>
         <WeatherInfo fromData={Data} />
+        <br />
         <Forecast coordinates={Data.coordinates} data={Data} />
       </div>
     );
